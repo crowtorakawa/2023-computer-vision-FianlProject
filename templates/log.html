@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>紀錄</title>
+      <link rel="stylesheet" href="/static/bootstrap.css">
+  </head>
+  <style>
+    .navbtn{
+        display: flex;
+        width:100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="navbtn" type="submit">
+		    <form class="form-inline" action="/requests">
+		        <div class="btns" type="submit">  
+                    <button class="btn btn-secondary">返回</button>
+                </div> 
+		    </form>
+            <form class="form-inline" action="/log">
+		        <div class="btns" type="submit">  
+                    <button class="btn btn-success">查看</button>
+                </div> 
+		    </form> 
+        </div>
+	  </nav>
+    <table class="table table-striped align-middle text-center">
+        <thead>
+          <tr>
+            <th>時間</th>
+            <th>員工</th>
+            <th>狀態</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in datas %}
+          <tr>
+            <td><h5 class="mb-0">{{ data.time }}</h5></td>
+            <td><span class="btn btn-secondary w-100">{{ data.staff }}</span></td>
+            <td><span class="btn btn-success" style="min-width:120px;">{{ data.state if data.state else ' ' }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <script src="/static/popper.js"></script>
+      <script src="/static/bootstrap.js"></script>
+  </body>
+</html>

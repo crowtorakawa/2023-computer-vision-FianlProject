@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/static/bootstrap.css">
+</head>
+<style>
+	.navbtn{
+        display: flex;
+        width:100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+</style>
+<body>
+	 <nav class="navbar navbar-light bg-light">
+        <div class="navbtn" type="submit">
+		    <form class="form-inline" action="/requests">
+		        <div class="btns" type="submit">  
+                    <button class="btn btn-secondary">返回</button>
+                </div> 
+		    </form>
+            <form class="form-inline" action="/log">
+		        <div class="btns" type="submit">  
+                    <button class="btn btn-success">查看</button>
+                </div> 
+		    </form> 
+        </div>
+	</nav>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8  offset-lg-2">
+				<h2 class="mt-5">手勢打卡</h2>
+				<form method="post" action="{{ url_for('tasks') }}">
+				<input type="submit" value="Stop/Start" name="stop" />
+				</form>
+				<img src="{{ url_for('video_feed') }}" height="80%">				
+			</div>
+		</div>
+	</div>
+	<script src="https://kit.fontawesome.com/98469420f8.js" crossorigin="anonymous"></script>
+	<script src="/static/popper.js"></script>
+	<script src="/static/bootstrap.js"></script>
+</body>
+</html>
+
+

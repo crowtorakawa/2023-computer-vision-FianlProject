@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打卡按這裡</title>
+    <link rel="stylesheet" href="/static/bootstrap.css">
+</head>
+<style>
+    .mainPage{
+    display: flex;
+    }
+    .maintext{
+        margin: auto;
+    }
+    .navbtn{
+        display: flex;
+        width:100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .maintext{
+        font-size: 20px;
+    }
+
+</style>
+<script>
+
+</script>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="navbtn" type="submit">
+		    <form class="form-inline" action="/requests">
+		        <div class="btns" type="submit">  
+                    <button class="btn btn-secondary">返回</button>
+                </div> 
+		    </form>
+            <form class="form-inline" action="/log">
+		        <div class="btns" type="submit">  
+                    <button class="btn btn-success">查看</button>
+                </div> 
+		    </form> 
+        </div>
+	</nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="mainPage">
+                <div class="maintext">打卡完成</div>
+            </div>
+            <div class="mainPage">
+                <div class="maintext">{{staff}}已經在{{time}}{{state}}了</div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="/static/popper.js"></script>
+	<script src="/static/bootstrap.js"></script>
+    
+</body>
+</html>
