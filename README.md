@@ -1,5 +1,5 @@
 # 2023-computer-vision-FianlProject
-#  Flask 相機偵測系統
+#  Flask 相機簡易打卡系統
 
 ## 功能說明
 
@@ -35,6 +35,7 @@
 - 從 MongoDB 讀取已存入的偵測結果  
 - 顯示在頁面上，以表格或列表方式呈現  
 <img width="1066" height="448" alt="image" src="https://github.com/user-attachments/assets/44d49599-0f36-4dfb-a098-b3417b0746c3" />
+<img width="511" height="384" alt="image" src="https://github.com/user-attachments/assets/26c9b4e3-7de6-4aab-8e8e-8e1cf3fb774d" />
 
 ---
 
